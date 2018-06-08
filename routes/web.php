@@ -13,4 +13,4 @@
 
 
 Route::get('/questions', 'QuestionController@index');
-Route::get('/questions/{id}', 'QuestionController@show');
+Route::get('/questions/{id}', 'QuestionController@show')->name('show question');
