@@ -15,6 +15,9 @@ class AnswersQuestionIdNotNullable extends Migration
     {
         Schema::table('answers', function (Blueprint $table) {
             //
+            $table->integer('question_id')->nullable(false)->change(); 
+
+
         });
     }
 
@@ -27,6 +30,7 @@ class AnswersQuestionIdNotNullable extends Migration
     {
         Schema::table('answers', function (Blueprint $table) {
             //
+            $table->integer('question_id')->nullable()->change();
         });
     }
 }
