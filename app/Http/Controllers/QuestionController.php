@@ -8,12 +8,12 @@ class QuestionController extends Controller
 {
     public function index()
     {
-        $view= view('questions.show');
+        $view= view('questions.index');
         return $view  ;
     }
-    
+
     public function show(){
-      $view= view('questions.index');
+      $view= view('questions.show');
         return $view  ;
     }
 }
