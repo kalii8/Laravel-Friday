@@ -15,7 +15,7 @@ class CreateAnswersTable extends Migration
     {
         Schema::create('answers', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('question_id')->nullable();
+            $table->integer('question_id');
             $table->integer('user_id')->nullable();
             $table->text('text')->nullable();
             $table->timestamps(); //creates  created_at and updated_at automatically
