@@ -8,6 +8,7 @@
 </section>
 
 <section id="question">
+@foreach($question as $question)
     <div class="container">
         <div class="question-left">
             <div class="user-avatar">
@@ -32,7 +33,9 @@
             <p> {{ $question->text }}</p>
             
         </div>
+      
     </div>
+    $endforeach
 </section>
 
 <section id="answers">

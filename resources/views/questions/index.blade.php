@@ -9,11 +9,10 @@
 </section>
 
 <section id="questions">
+
     <div class="container">
-
-
-
-    @foreach ($questions as $question)
+ 
+    @foreach($question as $question)
         <div class="question">
             <div class="question-left">
                 <div class="question-stat">
