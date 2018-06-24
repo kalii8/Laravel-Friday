@@ -1,6 +1,7 @@
 @extends('questions.layout')
 
 @section('content')
+@include ('alert')
 <section id="banner" class="banner-sm">
     <div class="container">
         <h1>Questions</h1>
@@ -8,8 +9,7 @@
 </section>
 
 <section id="question">
-@foreach($question as $question)
-    <div class="container">
+   <div class="container">
         <div class="question-left">
             <div class="user-avatar">
                 <img class="img-fluid"
@@ -35,7 +35,6 @@
         </div>
       
     </div>
-    $endforeach
 </section>
 
 <section id="answers">
@@ -64,6 +63,7 @@
             </div>
             <div class="answer-right">
                 <p>{{ $answer->text }}</p>
+                <p>{{ $answer->question->title }}</p> 
             </div>
         </div>
         @endforeach

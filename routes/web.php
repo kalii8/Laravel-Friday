@@ -13,5 +13,15 @@
 
 
 Route::get('/questions', 'QuestionController@index');
-Route::get('/questions/{id}', 'QuestionController@show')->name('show question');
+Route::get('/questions/create', 'QuestionController@create');
+Route::post('/questions', 'QuestionController@store');
+Route::get('/questions/{id}', 'QuestionController@show')->where('id', '\d+')->name('show question');
 Route::get('/categories', 'CategoryController@index');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
